@@ -5,6 +5,7 @@ package simd
 import (
 	"testing"
 
+	"github.com/chhsiao1981/go-simd/csum"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -34,8 +35,16 @@ func BenchmarkSumFloat64_Intrinsics_1000(b *testing.B) {
 	benchmarkSumFloat64Fn(b, 1000, sum_float64_avx_intrinsics)
 }
 
+func BenchmarkSumFloat64_IntrinsicsC_1000(b *testing.B) {
+        benchmarkSumFloat64Fn(b, 1000, csum.SumFloat64C)
+}
+
 func BenchmarkSumFloat64_Intrinsics_10000(b *testing.B) {
 	benchmarkSumFloat64Fn(b, 10000, sum_float64_avx_intrinsics)
+}
+
+func BenchmarkSumFloat64_IntrinsicsC_10000(b *testing.B) {
+        benchmarkSumFloat64Fn(b, 10000, csum.SumFloat64C)
 }
 
 func BenchmarkSumFloat64_AVX2_1000(b *testing.B) {
