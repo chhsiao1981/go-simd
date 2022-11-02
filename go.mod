@@ -1,3 +1,3 @@
-module github.com/chhsiao1981/go-simd
+module github.com/stuartcarnie/go-simd
 
-go 1.19
+go 1.18

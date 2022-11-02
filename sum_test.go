@@ -5,7 +5,7 @@ package simd
 import (
 	"testing"
 
-	"github.com/chhsiao1981/go-simd/csum"
+	"github.com/stuartcarnie/go-simd/csum"
 	"github.com/stretchr/testify/assert"
 )
 
