@@ -5,7 +5,7 @@
 
 #include "immintrin.h"
 
-void sum_float64_avx_intrinsics(double buf[], size_t len, double *res) {
+void sum_float64_avx_intrinsics_c(double buf[], size_t len, double *res) {
     if (len % 4 != 0) {
         return;
     }
